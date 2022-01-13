@@ -1,11 +1,11 @@
-FROM mrismanaziz/man-userbot:buster
+FROM lemon/mon-userbot:buster
 
-RUN git clone -b Man-Userbot https://github.com/mrismanaziz/Man-Userbot /home/manuserbot/ \
-    && chmod 777 /home/manuserbot \
-    && mkdir /home/manuserbot/bin/
+RUN git clone -b Mon-Userbot https://github.com/lemon/Mon-Userbot /home/monuserbot/ \
+    && chmod 777 /home/monuserbot \
+    && mkdir /home/monuserbot/bin/
 
-COPY ./sample_config.env ./config.env* /home/manuserbot/
+COPY ./sample_config.env ./config.env* /home/monuserbot/
 
-WORKDIR /home/manuserbot/
+WORKDIR /home/monuserbot/
 
 CMD ["python3", "-m", "userbot"]
